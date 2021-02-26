@@ -7,7 +7,7 @@ not to unnecessarily couple my integration tests to a real system in this way - 
 pollute said system with configuration specific to the testing of an application, it also slows
 the application down (real network calls) and causes tests to fail when there is an outage on the
 identity side. Authentication and authorization are important to test, but you don't need to do it
-on every integration tset.
+on every integration test.
 
 This repository demonstrates how to avoid this coupling by bypassing authentication and authorization
 constraints in tests.
