@@ -12,14 +12,21 @@ on every integration tset.
 This repository demonstrates how to avoid this coupling by bypassing authentication and authorization
 constraints in tests.
 
-## DISCLAIMER
+## Process
 
-The tests don't pass. I just grabbed a sample from the Identity Server 4 samples repository. I'm in
-a rush now so will revisit this with a cleaner working example later.
+1. Configure Startup in your API host to enable bypassing authentication/authorization configuration
+See [here](IdentityServer/Startup.cs#L23) for an example.
+2. Override this method in a *TestStartup* class (which derives from *Startup*) to register fake handlers.
+Examples of how to fake this are available [here](IntegrationTests/Infrastructure/Security), with example
+usage [here](IntegrationTests/Infrastructure/Hosting/TestStartup.cs).
+3. Configure *WebApplicationFactory* to use *TestStartup* in your tests.
+[Here](IntegrationTests/Infrastructure/Hosting/MyWebApplicationFactory.cs) is an example of how to
+configure this, and [here](IntegrationTests/Controllers/BooksController/GetSpec/Getting_claims.cs#L17)
+is an example of how to use it.
 
-## Steps
+## Additional details
 
-1. Add a protected virtual member to Startup which only configures auth
-2. Override this in TestStartup in your integration tests to configure auth with your fakes
-[sample code](IntegrationTests/Infrastructure/Security)
-3. Profit 
+There are two tests in this example. Taken together these demonstrate that the bypass works; one to
+show that not using it yields a 401, and another to show that using it yields a 200.
+
+![tests screenshot](tests.jpg)
