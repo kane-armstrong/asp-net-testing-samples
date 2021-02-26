@@ -1,8 +1,8 @@
-# Authentication Samples
+# ASP.NET Core Testing Samples
 
 This repository contains samples/demo code for various testing concerns, e.g.
 patterns for integration testing, solutions to problems like integration testing
-in the presence of authentication/authorization, etc.
+in the presence of authentication/authorization, testing using Docker, etc.
 
 ## Current samples
 
