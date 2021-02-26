@@ -16,3 +16,10 @@ constraints in tests.
 
 The tests don't pass. I just grabbed a sample from the Identity Server 4 samples repository. I'm in
 a rush now so will revisit this with a cleaner working example later.
+
+## Steps
+
+1. Add a protected virtual member to Startup which only configures auth
+2. Override this in TestStartup in your integration tests to configure auth with your fakes
+[sample code](IntegrationTests/Infrastructure/Security)
+3. Profit 
