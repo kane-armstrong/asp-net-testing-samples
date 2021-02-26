@@ -6,7 +6,7 @@ using Xunit;
 
 namespace IntegrationTests.Controllers.BooksController.GetSpec
 {
-    public class Getting_claims
+    public class Getting_books
     {
         [Fact]
         public async Task returns_200_ok()

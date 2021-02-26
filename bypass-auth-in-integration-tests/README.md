@@ -21,7 +21,7 @@ Examples of how to fake this are available [here](IntegrationTests/Infrastructur
 usage [here](IntegrationTests/Infrastructure/Hosting/TestStartup.cs#L9).
 3. Configure *WebApplicationFactory* to use *TestStartup* in your tests.
 [Here](IntegrationTests/Infrastructure/Hosting/MyWebApplicationFactory.cs) is an example of how to
-configure this, and [here](IntegrationTests/Controllers/BooksController/GetSpec/Getting_claims.cs#L17)
+configure this, and [here](IntegrationTests/Controllers/BooksController/GetSpec/Getting_books.cs#L17)
 is an example of how to use it.
 
 ## Additional details
