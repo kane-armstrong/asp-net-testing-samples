@@ -18,7 +18,7 @@ constraints in tests.
 See [here](IdentityServer/Startup.cs#L23) for an example.
 2. Override this method in a *TestStartup* class (which derives from *Startup*) to register fake handlers.
 Examples of how to fake this are available [here](IntegrationTests/Infrastructure/Security), with example
-usage [here](IntegrationTests/Infrastructure/Hosting/TestStartup.cs).
+usage [here](IntegrationTests/Infrastructure/Hosting/TestStartup.cs#L9).
 3. Configure *WebApplicationFactory* to use *TestStartup* in your tests.
 [Here](IntegrationTests/Infrastructure/Hosting/MyWebApplicationFactory.cs) is an example of how to
 configure this, and [here](IntegrationTests/Controllers/BooksController/GetSpec/Getting_claims.cs#L17)
