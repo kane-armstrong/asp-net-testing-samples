@@ -1,0 +1,5 @@
+FROM mcr.microsoft.com/dotnet/sdk:5.0.100-alpine3.12 AS build
+ARG Configuration=Release
+WORKDIR /app
+COPY . ./
+CMD dotnet test ./UnitTests/UnitTests.csproj

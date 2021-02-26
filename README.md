@@ -8,3 +8,4 @@ in the presence of authentication/authorization, testing using Docker, etc.
 
 * Bypassing authentication and authorization in ASP.NET Core integration tests
 [link](bypass-auth-in-integration-tests)
+* Running unit and integration tests in docker [link](testing-in-docker)

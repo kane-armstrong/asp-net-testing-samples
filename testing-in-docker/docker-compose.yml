@@ -1,0 +1,19 @@
+version: '3'
+services:
+  webapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5650:5650"
+    environment:
+      ASPNETCORE_URLS: http://+:5650
+      ASPNETCORE_ENVIRONMENT: Development
+  integrationtests:
+    build:
+      context: .
+      dockerfile: Dockerfile.IntegrationTests
+  unittests:
+    build:
+      context: .
+      dockerfile: Dockerfile.UnitTests
